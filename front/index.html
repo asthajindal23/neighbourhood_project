@@ -1,0 +1,35 @@
+<DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Chandigarh</title>
+<link rel="stylesheet" href="css/style.css">
+<!--for responsive site-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<!--heading has city name-->
+<h1>Chandigarh city</h1>
+<!--first div has search box-->
+<div class="find" id="find">
+<input class="search-box" id="search-box" data-bind="textInput: searchTerm, valueUpdate: 'afterkeydown'" />
+</div>
+<!--contains list and map-->
+<div class="main-list" id="main-list">
+<!--list-->
+<div class="list" id="list">
+<ul class="result" id="result" data-bind="foreach: filteredList">
+<li class="place" id="place" data-bind="text: name, click: bounce"></li>
+			</ul>
+		</div>
+<!--error for map-->
+<div class="map" id="map"> map can't be loaded..</div>
+	</div>
+	<!--script files-->
+<script src='js/knockout-3.4.0.js'></script>
+<script src='js/jquery-1.12.0.min.js'></script>
+<script src='js/js.js'></script>
+<!--google map loading-->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApnO5GjXaE0fY6W78_MoE7QBReiyOSlEE&callback=startApp&libraries=places" onerror="errorHandling()"></script>
+</body>
+</html>
